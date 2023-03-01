@@ -1,2 +1,51 @@
-free vm download link:
-https://drive.google.com/file/d/1kTjvz1cCLTpDW2ylH4CZRaAAlHTtViNH/view?usp=sharing
+name: CI
+
+on: [push, workflow_dispatch]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: 安裝套件
+      
+      run: sudo apt-get -qq install neofetch speedtest-cli
+
+    - name: 下載SSHD設定檔
+    
+      run: wget https://raw.githubusercontent.com/GogoZin/sshd/main/sshd_config -O sshd_config
+    
+    - name: 取代預設SSHD設定檔
+    
+      run: sudo cp sshd_config /etc/ssh/sshd_config
+      
+    - name: 重新啟動SSH服務
+    
+      run: sudo service ssh restart
+      
+    - name: 移除ROOT使用者密碼
+      
+      run: sudo passwd -d root
+    
+    - name: 移除RUNNER使用者密碼
+    
+      run: sudo passwd -d runner
+
+    - name: 下載ngrok套件壓縮檔
+
+      run: wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+
+    - name: 解壓縮ngrok套件
+
+      run: tar zxvf ngrok-v3-stable-linux-amd64.tgz
+
+    - name: 設定ngrok的token驗證
+
+      run: ./ngrok config add-authtoken 2MHxF7bg7hU16hbjTB5GTBRMCmT_6ZWxNPTNXpDWbVoo9CYBM
+
+    - name: 建立連線隧道
+
+      run: ./ngrok tcp 22
