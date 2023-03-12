@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JoeBLog landing page.">
+    <meta name="author" content="Devcrud">
+    <title>天堂Heaven遊戲平台</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + JoeBLog main styles -->
+    <link rel="stylesheet" href="assets/css/joeblog.css">
+    <script src='ruffle.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Second Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-primary sticky-top">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="no-sidebar.html">資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="single-post.html">貼文</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            遊戲
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">單機破解</a>
+                            <a class="dropdown-item" href="#">網遊私服</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">在線H5</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">即將推出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Page Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="page-header page-header-mini">
+        <h1 class="title">天堂Heaven遊戲平台</h1>
+        <ol class="breadcrumb pb-0">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">天堂Heaven遊戲平台</li>
+        </ol>
+    </header>
+    <!-- End Of Page Header -->
+
+    <section class="container">
+        <div class="page-container">
+            <div class="page-content">
+                <div class="card">
+                    <div class="card-header pt-0">
+                        <h3 class="card-title mb-4">天堂Heaven遊戲平台</h3>
+                        <div class="blog-media mb-4">
+                            <!-- <img src="assets/imgs/blog-6.jpg" alt="" class="w-100">
+                            <a href="#" class="badge badge-primary">#平台宣傳</a> -->
+                            <script type="text/javascript">
+                                var pageWriter_1 = "<embed id='FlashGameEmbed' src='";
+                                var pageWriter_2 = "' allownetworking='internal' quality='high' width='100%' height='600px' align='middle' type='application/x-shockwave-flash' pluginspage='http://get.adobe.com/tw/flashplayer/' /></embed>";
+
+                                function ChooseGame(game) {
+                                    var gameInput = game.id + ".swf";
+                                    var gameWindow = pageWriter_1 + gameInput + pageWriter_2;
+                                    document.getElementById("gameBLOCK").innerHTML = gameWindow;
+                                }
+                            </script>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown">楓之谷小遊戲</button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" onclick="ChooseGame(this)"
+                                                id="maplestory4">楓之谷4</a>
+                                            <a class="dropdown-item" onclick="ChooseGame(this)"
+                                                id="maplestory075">楓之谷075</a>
+                                            <a class="dropdown-item" onclick="ChooseGame(this)"
+                                                id="maplestory076">楓之谷076</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown">策略模擬小遊戲</button>
+                                        <div class="dropdown-menu">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown">破解版小遊戲</button>
+                                        <div class="dropdown-menu">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown">其他小遊戲</button>
+                                        <div class="dropdown-menu">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="small text-muted">
+                            <span href="#" class="text-muted">BY 管理員</span>
+                            <span class="px-2">·</span>
+                            <span>02 28 2013</span>
+                            <span class="px-2">·</span>
+                            <a href="#" class="text-muted" style="color:aqua !important;">>>點擊加入LINE群組
+                            </a>
+                        </small>
+                    </div>
+                    <div id="gameBLOCK">
+                    </div>
+                    <div class="card-body border-top">
+                        <p class="my-3">平台所有東西皆是免費的 上線即領各種福利 管理員本身也是個玩家 懂玩家在想甚麼.</p>
+                        <p>大家都想不花 或是花少少的錢 把遊戲玩到很強, 在本平台絕對可以顛覆你對於福利遊戲的認知.</p>
+
+                        <p>因平台是一個人搭建的 所有的東西都是一個人完成 所以有很多不足的地方 還請多見諒 有問題歡迎入LINE社群回報 回報有獎勵.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-3 text-center text-md-left mb-3 mb-md-0">
+                    <img src="assets/imgs/logo.svg" alt="" class="logo">
+                </div>
+                <div class="col-md-9 text-center text-md-right">
+                </div>
+            </div>
+            <p class="border-top mb-0 mt-4 pt-3 small">&copy;
+                <script>document.write(new Date().getFullYear())</script>, 天堂Heaven遊戲平台 架站者 <a
+                    href="https://www.devcrud.com" class="text-muted font-weight-bold" target="_blank">HJ.</a> 版權所有.
+            </p>
+        </div>
+    </footer>
+    <!-- End of Page Footer -->
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- JoeBLog js -->
+    <script src="assets/js/joeblog.js"></script>
+
+</body>
+
+</html>
