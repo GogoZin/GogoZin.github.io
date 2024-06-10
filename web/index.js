@@ -9,7 +9,7 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 async function showMe(ele) { //
     // console.log(ele.value);
     var r = new XMLHttpRequest(); //透過XML去發一個GET請求
-    r.open('get', 'https://tw539.com/539/jackpot.txt', false); 
+    r.open('get', 'https://tw539.com/web/jackpot.txt', false); 
     //這邊第三個參數必須是false 保持同步 否則下方 responseText抓不到資料會是空值
     r.send(null); //只要是get讀取資料 不進行更改的話 這邊必須要是 null #唯讀
     var text = r.responseText; //把response的內容存進變數 這邊其實就是txt檔案裡面的內容
@@ -114,7 +114,7 @@ async function getNumber() {
 
 async function lstHandler() { //Code By Zin
     var r = new XMLHttpRequest(); //透過XML去發一個GET請求
-    r.open('get', 'https://tw539.com/539/jackpot.txt', false); 
+    r.open('get', 'https://tw539.com/web/jackpot.txt', false); 
     //這邊第三個參數必須是false 保持同步 否則下方 responseText抓不到資料會是空值
     r.send(null); //只要是get讀取資料 不進行更改的話 這邊必須要是 null #唯讀
     var text = r.responseText; //把response的內容存進變數 這邊其實就是txt檔案裡面的內容
