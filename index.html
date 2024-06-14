@@ -30,6 +30,72 @@
 
         gtag('config', 'G-HWWKTD3SEG');
     </script>
+    <style>
+        .marquee-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            position: fixed;
+            top: 75px;
+            z-index: 9999;
+            padding: 0.5rem;
+            color: #FF6CDA;
+            white-space: nowrap
+        }
+
+        .marquee-content {
+            display: inline-block;
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .marquee-line {
+            animation: marquee 20s linear infinite;
+        }
+
+        /* .marquee-container_affix {
+            top: 70px;
+        } */
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(90%);
+                color: #FF6CDA;
+            }
+
+            100% {
+                transform: translateX(-100%);
+                color: #ff6e42;
+            }
+        }
+
+        @media (max-width: 800px) {
+            @keyframes marquee {
+                0% {
+                    transform: translateX(90%);
+                    color: #FF6CDA;
+                }
+
+                100% {
+                    transform: translateX(-150%);
+                    color: #ff6e42;
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            @keyframes marquee {
+                0% {
+                    transform: translateX(90%);
+                }
+
+                100% {
+                    transform: translateX(-300%);
+                    color: #ff6e42;
+                }
+            }
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -69,6 +135,13 @@
             </div>
         </div>
     </nav>
+
+    <div class="marquee-container" id="marquee-container">
+        <h5 style="width: 20%;text-align: center;">公告: </h5>
+        <div class="marquee-content">
+            <div class="marquee-line">新遊戲仙夢奇緣上線, 請至免費遊戲區查看, 539開牌算法更新, 另外本平台有接案服務, 詳情請洽底部LINE客服</div>
+        </div>
+    </div>
     <!-- End Of Second Navigation -->
 
     <!-- Page Header -->
@@ -454,7 +527,9 @@
                                     alt="">
                                 <div class="media-body">
                                     <h6 class="mt-1 mb-0">Facebook粉絲團</h6>
-                                    <small class="text-muted mb-0">添加ID : <a href=" https://www.facebook.com/profile.php?id=61559128157697&mibextid=ZbWKwL" target="_blank">傳送門</a></small>
+                                    <small class="text-muted mb-0">添加ID : <a
+                                            href=" https://www.facebook.com/profile.php?id=61559128157697&mibextid=ZbWKwL"
+                                            target="_blank">傳送門</a></small>
                                 </div>
                             </div>
                             <p class="mb-0">服務內容 : 網路技術相關, 軟體相關問題 歡迎詢問</p>
