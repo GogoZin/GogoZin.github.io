@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,h2,h3,h4 {
+            color: transparent;
+            background-image: linear-gradient(to top left, orange, red, yellow);
+            background-clip: text;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        body {
+            margin: 0 auto;
+            padding: 0;
+        }
+        button {
+            width: 30%;
+            margin-right: 5px;
+            margin-left: 5px;
+            background-image: linear-gradient(to top left, orange, red, yellow);
+            color: white;
+            border-radius: .5rem;
+            height: 36px;
+            font-size: 24px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #note {
+            border-style: groove;
+            border-radius: .5rem;
+            border-color: orange;
+            background-color: white;
+            height: 36px;
+            width: 100%;
+            margin: 0 auto;
+            font-size: xx-large;
+            font-weight: bold;
+            background-image: linear-gradient(to top left, orange, red, yellow);
+            background-clip: text;
+            color: transparent;
+            overflow: hidden;
+        }
+        .notepad {
+            margin: -15px 25px 30px 25px;
+            background-color: white;
+        }
+        .bignote {
+            color: red !important;
+            position: absolute;
+            background-color: white !important;
+            background-image: none !important;
+            background-clip: unset !important;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 600px !important;
+            margin: 0 auto;
+            width: 75% !important;
+        }
+        .held {
+            background-color: yellow;
+        }
+        .row {
+            border-bottom: solid 1px;
+            background-color: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form {
+            border-radius: 1rem;
+            max-height: 600px;
+            scrollbar-width: 1px;
+            overflow-y: scroll;
+            border: solid 1px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 25px;
+            margin-right: 25px;
+            text-align: center;
+        }
+        .form::-webkit-scrollbar {
+            display: none;
+        }
+        .nBLOCK {
+            width: 20%;
+            height: 36px;
+            color: blue;
+            font-weight: bold;
+            font-size: xx-large;
+        }
+        .nBLOCK:hover {
+            background-color: palevioletred;
+        }
+        .control-panel {
+            display: flex;
+            width: 100%;
+            height: 72px;
+            position: absolute;
+            bottom: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        .onTop {
+            position: absolute;
+            top: 87%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>今彩539歷史開牌紀錄</h1>
+    <div class="form"></div>
+    <div class="notepad">
+        <h2 id="noteTitle" class="hide">暫存記事本</h2>
+        <textarea type="text" id="note"></textarea>
+    </div>
+    <div class="control-panel">
+        <button onclick="toggleNote()">號碼暫存</button>
+        <button onclick="deleteHold()">標記全刪</button>
+        <button>測試中</button>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
