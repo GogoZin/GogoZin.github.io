@@ -27,11 +27,12 @@ async function showMe(ele) { //
     }
     document.getElementById("daily_num").value = daily_num; //帶進input欄位
     document.getElementById("weekly_num").value = weekly_num; //同上
+    document.getElementById("twoIone_num").value = twoIone_num;
     if (windowCheck !=0) { //驗證用 如果這個參數不是0 說明視窗已經被打開
         document.getElementById("showWindow").style.display = "none";
         document.getElementById("showDaily").style.display = "none";
         document.getElementById("showWeekly").style.display = "none";
-        document.getElementById("showInfo").style.display = "none";
+        document.getElementById("showTwoIone").style.display = "none";
         windowCheck -= 1; //把全部視窗的display設為none 並把這個數值-1回到0
         return 0; //結束這個涵式 實現點一下開啟 點第二下關閉
     } else { //如果windowCheck是0
@@ -48,7 +49,7 @@ async function showMe(ele) { //
             case "page_info":
                 break;
             case "twoIone":
-                ocument.getElementById("showTwoIone").style.display = "block";
+                document.getElementById("showTwoIone").style.display = "block";
                 break;
             default:
                 break;
