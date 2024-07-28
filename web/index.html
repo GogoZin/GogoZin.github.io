@@ -217,7 +217,8 @@
 
         .showDaily,
         .showWeekly,
-        .showInfo {
+        .showInfo,
+        .showTwoIone {
             display: none;
         }
 
@@ -363,8 +364,13 @@
                             <p>向左滑動查看更多號碼</p>
                         </div>
                         <div class="showWeekly" id="showWeekly">
-                            <h2>近期包牌組合</h2>
+                            <h2>近期包牌</h2>
                             <input type="text" id="weekly_num" class="comb" readonly>
+                            <p>向左滑動查看更多號碼</p>
+                        </div>
+                        <div class="showTwoIone" id="showTwoIone">
+                            <h2>二中一&坐車</h2>
+                            <input type="text" id="twoIone_num" class="comb" readonly>
                             <p>向左滑動查看更多號碼</p>
                         </div>
                         <div class="showInfo" id="showInfo">
@@ -372,9 +378,10 @@
                             <input type="text" id="info" class="comb" readonly>
                         </div>
                     </div>
-                    <button class="call_python" onclick="showMe(this);" value="daily">當日不出</button>
+                    <button class="call_python" onclick="showMe(this);" value="daily">今日不出</button>
                     <button class="call_python" onclick="showMe(this);" value="weekly">近期包牌</button>
                     <button class="call_python" onclick="showMe(this);" value="page_info"><a href="f.html">歷史紀錄</a></button>
+                    <button class="call_python" onclick="showMe(this);" value="twoIone">今日坐車</button>
                 </div>
             </div>
         </div>

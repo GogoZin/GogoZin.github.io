@@ -13,10 +13,17 @@ async function showMe(ele) { //
     //這邊第三個參數必須是false 保持同步 否則下方 responseText抓不到資料會是空值
     r.send(null); //只要是get讀取資料 不進行更改的話 這邊必須要是 null #唯讀
     var text = r.responseText; //把response的內容存進變數 這邊其實就是txt檔案裡面的內容
-    var weekly_num = text.split("\n")[1]; //第二筆會是近期組合
-    var daily_num = text.split("\n")[2]; //第三筆會是每日組合
-    if (daily_num.length < 15) {
-        daily_num = "暫無今日包牌組合";
+    var weekly_num = text.split("\n")[1]; //第二筆是包牌組合
+    var daily_num = text.split("\n")[2]; //第三筆是不出組合
+    var twoIone_num = text.split("\n")[3] //第三筆是二中一
+    if (weekly_num.length < 15) {
+        weekly_num = "近期包牌未更新";
+    };
+    if (daily_num.length < 10) {
+        daily_num = "今日沒有不出牌";
+    };
+    if (twoIone_num.length < 8) {
+        twoIone_num = "今日沒有二中一"
     }
     document.getElementById("daily_num").value = daily_num; //帶進input欄位
     document.getElementById("weekly_num").value = weekly_num; //同上
@@ -39,7 +46,10 @@ async function showMe(ele) { //
                 document.getElementById("showWeekly").style.display = "block";
                 break;
             case "page_info":
-                document.getElementById("showInfo").style.display = "block";
+                break;
+            case "twoIone":
+                ocument.getElementById("showTwoIone").style.display = "block";
+                break;
             default:
                 break;
         }
