@@ -9,7 +9,7 @@ function OutputAry() {
     var num_ary = text.split("\n");
     var new_ary = [];
     for (var x = 0; x < num_ary.length; x ++) {
-        if (num_ary[x].length >= 9 && num_ary[x] != undefined) {
+        if (num_ary[x].length >= 9 && num_ary[x] != undefined && num_ary != null) {
             new_ary.push(num_ary[x]);
         }
     }
@@ -42,6 +42,20 @@ function deleteHold() {
     const sNum = document.querySelectorAll(".held");
     sNum.forEach(n => {
         n.classList.remove("held");
+    });
+}
+
+function lightNum() {
+    const block = document.querySelectorAll(".nBLOCK");
+    const ary = document.getElementById("note");
+    const num_ary = ary.value.split(" ");
+    console.log(num_ary);
+    block.forEach(bNum => {
+        for (var n = 0; n < num_ary.length; n ++) {
+            if (bNum.innerHTML == num_ary[n]) {
+                bNum.classList.add("held");
+            };
+        };
     });
 }
 
