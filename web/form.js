@@ -49,7 +49,8 @@ function lightNum() {
     const block = document.querySelectorAll(".nBLOCK");
     const ary = document.getElementById("note");
     const num_ary = ary.value.split(" ");
-    console.log(num_ary);
+    closeAREA();
+    deleteHold();
     block.forEach(bNum => {
         for (var n = 0; n < num_ary.length; n ++) {
             if (bNum.innerHTML == num_ary[n]) {
@@ -57,6 +58,13 @@ function lightNum() {
             };
         };
     });
+}
+
+function closeAREA() {
+    const btn = document.getElementById("areaBTN");
+    const ary = document.getElementById("note");
+    btn.classList.toggle("hide");
+    ary.classList.toggle("hide");
 }
 
 const num_ary = OutputAry();

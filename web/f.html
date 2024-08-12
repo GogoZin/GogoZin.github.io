@@ -15,7 +15,7 @@
             padding: 0;
         }
         button {
-            width: 30%;
+            width: 40%;
             margin-right: 5px;
             margin-left: 5px;
             background-image: linear-gradient(to top left, orange, red, yellow);
@@ -30,9 +30,12 @@
             border-radius: .5rem;
             border-color: orange;
             background-color: white;
-            height: 36px;
-            width: 100%;
-            margin: 0 auto;
+            height: 72px;
+            width: 70%;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
             font-size: xx-large;
             font-weight: bold;
             color: orangered;
@@ -41,6 +44,7 @@
         .notepad {
             margin: -15px 25px 30px 25px;
             background-color: white;
+            padding-bottom: 36px;
         }
         .bignote {
             color: red !important;
@@ -94,10 +98,7 @@
             display: flex;
             width: 100%;
             height: 72px;
-            position: absolute;
-            bottom: 0;
             justify-content: center;
-            align-items: center;
         }
         .hide {
             display: none;
@@ -111,6 +112,12 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        #areaBTN {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 60%;
+            left: 50%;
+        }
     </style>
 </head>
 <body>
@@ -118,12 +125,12 @@
     <div class="form"></div>
     <div class="notepad">
         <h2 id="noteTitle" class="hide">暫存記事本</h2>
-        <textarea type="text" id="note" placeholder="例:1 12 34 自動標記亮紀錄"></textarea>
+        <textarea class="hide" type="text" id="note" placeholder="例:1 3 6 12 34 "></textarea>
+        <button class="hide" id="areaBTN" onclick="lightNum()">確定</button>
     </div>
     <div class="control-panel">
-        <button onclick="toggleNote()">號碼暫存</button>
-        <button onclick="deleteHold()">標記全刪</button>
-        <button onclick="lightNum()">自動標記</button>
+        <button onclick="deleteHold()">清除自選號</button>
+        <button onclick="lightNum()">搜尋自選號</button>
     </div>
     <script src="form.js"></script>
 </body>
