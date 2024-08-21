@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今彩539 概率演算器</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        @keyframes light {
+
+            0%,
+            100% {
+                color: yellow;
+                text-shadow: 1px 1px goldenrod,
+                    2px 2px gold;
+            }
+
+            50% {
+                color: gold;
+                text-shadow: 1px 1px goldenrod,
+                    2px 2px yellow;
+            }
+        }
+
+        h1 {
+            color: gold;
+            text-shadow: 0 0 10px #ffc100;
+            /* animation: light 0.3s ease-in-out infinite alternate; */
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .special {
+            color: gold;
+            text-shadow: 3px 3px goldenrod;
+            animation: none !important;
+            /* animation: light 0.3s ease-in-out infinite alternate; */
+        }
+
+        .line-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes ballanimation {
+            12.5% {
+                background-image: linear-gradient(to top, orangered, white);
+            }
+
+            25% {
+                background-image: linear-gradient(to top right, orangered, white);
+            }
+
+            37.5% {
+                background-image: linear-gradient(to right, orangered, white);
+            }
+
+            50% {
+                background-image: linear-gradient(to bottom right, orangered, white);
+                border-color: gold;
+            }
+
+            62.5% {
+                background-image: linear-gradient(to bottom, orangered, white);
+            }
+
+            75% {
+                background-image: linear-gradient(to bottom left, orangered, white);
+            }
+
+            87.5% {
+                background-image: linear-gradient(to left, orangered, white);
+            }
+
+            100% {
+                background-image: linear-gradient(to top left, orangered, white);
+                border-color: red;
+            }
+        }
+
+        @keyframes bganimation {
+            12.5% {
+                background-image: linear-gradient(to top, pink, yellow);
+            }
+
+            25% {
+                background-image: linear-gradient(to top right, pink, yellow);
+            }
+
+            37.5% {
+                background-image: linear-gradient(to right, pink, yellow);
+            }
+
+            50% {
+                background-image: linear-gradient(to bottom right, pink, yellow);
+            }
+
+            62.5% {
+                background-image: linear-gradient(to bottom, pink, yellow);
+            }
+
+            75% {
+                background-image: linear-gradient(to bottom left, pink, yellow);
+            }
+
+            87.5% {
+                background-image: linear-gradient(to left, pink, yellow);
+            }
+
+            100% {
+                background-image: linear-gradient(to top left, pink, yellow);
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            /* background-image: linear-gradient(to top, pink, yellow);
+            animation: bganimation 0.5s ease-out infinite; */
+        }
+
+        /* .container {
+            padding-left: 15%;
+            padding-right: 15%;
+        } */
+
+        .wrapper {
+            min-height: 100%;
+            margin-bottom: -90px;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .content {
+            width: 100%;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: aqua;
+            height: 90px;
+            line-height: 90px;
+        }
+
+        .num_circle {
+            font-size: 36px;
+            text-align: center;
+            border-radius: 99rem;
+            border-style: solid;
+            height: 120px;
+            width: 120px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-image: linear-gradient(to top left, orangered, white);
+            /* background-color: orangered; */
+        }
+
+        .ball_form {
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ball_block {
+            margin-top: 60px;
+        }
+
+        .call_python {
+            border-radius: 5rem;
+            background-image: linear-gradient(to bottom, white, orange);
+            width: 140px;
+            height: 40px;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .showWindow {
+            position: absolute;
+            margin: auto;
+            z-index: 99;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 180px;
+            width: 70%;
+            background-color: rgb(237, 241, 165);
+            border-radius: 1rem;
+            animation: windowin .5s linear 0s;
+            display: none;
+        }
+
+        .showDaily,
+        .showWeekly,
+        .showInfo,
+        .showTwoIone {
+            display: none;
+        }
+
+        .logoImg {
+            max-width: 8%;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        @keyframes windowin {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .intro {
+            overflow-wrap: normal;
+            word-break: normal;
+            text-align: center;
+            font-size: large;
+        }
+
+        @media (max-width: 840px) {
+            .num_circle {
+                height: 90px;
+                width: 90px;
+            }
+
+            .logoImg {
+                max-width: 10%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .num_circle {
+                height: 60px;
+                width: 60px;
+                font-size: 24px;
+            }
+
+            h1 {
+                font-size: 48px !important;
+            }
+
+            .logoImg {
+                max-width: 15%;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .num_circle {
+                height: 40px;
+                width: 40px;
+            }
+
+            .logoImg {
+                max-width: 20%;
+            }
+        }
+
+        .logoDesign {
+            display: flex;
+        }
+
+        .bbb {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        /* .bb {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+        } */
+
+        .comb {
+            margin: 5px;
+            text-align: center;
+            font-size: 24px;
+            height: 45px;
+            max-width: 70%;
+            border-radius: .5rem;
+            border: none;
+            background-color: darkorange;
+            overflow-x: scroll !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="ball_block">
+                <!-- <div class="logoDesign">
+                    <h1 class="special">T</h1><h1>aiwan</h1><h1 class="special">I</h1><h1>nternet</h1>
+                </div> -->
+                <img src="./daily_cash.svg" alt="">
+                <h2>輸入號碼</h2>
+                <div class="ball_form input_ball">
+                    <input type="text" id="num_1" class="num_circle num_input" maxlength="2"
+                        oninput="value=value.replace(/[^\d]/g,'')" required>
+                    <input type="text" id="num_2" class="num_circle num_input" maxlength="2"
+                        oninput="value=value.replace(/[^\d]/g,'')" required>
+                    <input type="text" id="num_3" class="num_circle num_input" maxlength="2"
+                        oninput="value=value.replace(/[^\d]/g,'')" required>
+                    <input type="text" id="num_4" class="num_circle num_input" maxlength="2"
+                        oninput="value=value.replace(/[^\d]/g,'')" required>
+                    <input type="text" id="num_5" class="num_circle num_input" maxlength="2"
+                        oninput="value=value.replace(/[^\d]/g,'')" required>
+                </div>
+                <br>
+                <button class="call_python btn" onclick="checkIfClick()">計算概率</button>
+                <div class="line-container">
+                    <hr align="center" width="30%" color="gold" />
+                    <h1>財神送財 福高者得</h1>
+                    <hr align="center" width="30%" color="gold" />
+                </div>
+                <h2>預測號碼</h2>
+                <div class="ball_form">
+                    <input type="text" id="output_num_1" class="num_circle" readonly>
+                    <input type="text" id="output_num_2" class="num_circle" readonly>
+                    <input type="text" id="output_num_3" class="num_circle" readonly>
+                    <input type="text" id="output_num_4" class="num_circle" readonly>
+                    <input type="text" id="output_num_5" class="num_circle" readonly>
+                </div>
+                <div class="ball_form">
+                    <div class="showWindow" id="showWindow">
+                        <div class="showDaily" id="showDaily">
+                            <h2>當日不出牌</h2>
+                            <input type="text" id="daily_num" class="comb" readonly>
+                            <p>向左滑動查看更多號碼</p>
+                        </div>
+                        <div class="showWeekly" id="showWeekly">
+                            <h2>近期包牌</h2>
+                            <input type="text" id="weekly_num" class="comb" readonly>
+                            <p>向左滑動查看更多號碼</p>
+                        </div>
+                        <div class="showTwoIone" id="showTwoIone">
+                            <h2>二中一&坐車</h2>
+                            <input type="text" id="twoIone_num" class="comb" readonly>
+                            <p>向左滑動查看更多號碼</p>
+                        </div>
+                        <div class="showInfo" id="showInfo">
+                            <h2>演算依據</h2>
+                            <input type="text" id="info" class="comb" readonly>
+                        </div>
+                    </div>
+                    <button class="call_python" onclick="showMe(this);" value="daily">今日不出</button>
+                    <button class="call_python" onclick="showMe(this);" value="weekly">近期包牌</button>
+                    <button class="call_python" onclick="showMe(this);" value="page_info"><a href="f.html">歷史紀錄</a></button>
+                    <button class="call_python" onclick="showMe(this);" value="twoIone">近期坐車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
