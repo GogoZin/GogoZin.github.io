@@ -12930,6 +12930,10 @@ body.dark-theme {
   color: red;
 }
 
+.default {
+  color: white;
+}
+
 .pc {
   color: #007bff;
 }
