@@ -12920,11 +12920,11 @@ body.dark-theme {
 }
 
 .android {
-  color: greenyellow;
+  color: darkgreen;
 }
 
 .ios {
-  color: yellow;
+  color: darkorange;
 }
 
 .backend {
