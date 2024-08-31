@@ -12932,7 +12932,7 @@ body.dark-theme {
 }
 
 .default {
-  color: white;
+  color: black;
 }
 
 .pc {
@@ -12979,8 +12979,8 @@ body.dark-theme {
 }
 
 .direct-btn {
-  border-radius: .5rem;
+  border-radius: 5px;
   border: 0;
   background-color: azure;
-  padding: 2px 4px;
+  padding: 3px 9px;
 }
