@@ -99,7 +99,7 @@ $(document).ready(function(){
         block.innerHTML = frame;
     });
 
-    $(".download-btn").on('ckick', function() {
+    $(".download-btn").on('click', function() {
         const link = this.value;
         console.log(link);
         window.open(link, '_blank');
