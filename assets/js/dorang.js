@@ -101,6 +101,7 @@ $(document).ready(function(){
 
     $(".download-btn").on('ckick', function() {
         const link = this.value;
+        console.log(link);
         window.open(link, '_blank');
     });
 }); 
