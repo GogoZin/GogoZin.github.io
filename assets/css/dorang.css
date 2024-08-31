@@ -12965,3 +12965,22 @@ body.dark-theme {
 .game-btn:hover {
   background-color: var(--gray);
 }
+
+.ad-block {
+  position: absolute;
+}
+
+.ad-left {
+  left: 0;
+}
+
+.ad-right {
+  right: 0;
+}
+
+.direct-btn {
+  border-radius: .5rem;
+  border: 0;
+  background-color: azure;
+  padding: 2px 4px;
+}
