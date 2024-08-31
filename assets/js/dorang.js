@@ -98,5 +98,10 @@ $(document).ready(function(){
         const frame = '<iframe src="' + gamePath + '" width="100%" height="768px" style="overflow-y: hidden;" class="border-0"></iframe>'
         block.innerHTML = frame;
     });
+
+    $(".download-btn").on('ckick', function() {
+        const link = this.value;
+        window.open(link, '_blank');
+    });
 }); 
 
