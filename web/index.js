@@ -3,36 +3,16 @@ var count_times = 0;
 var num_array_lst = [];
 var windowCheck = 0;
 
-const sleep = ms => new Promise(r => setTimeout(r, ms)); 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
 //promise同步確保timeout完成才進行下一步
 
-async function showMe(ele) { //
-    // console.log(ele.value);
-    var r = new XMLHttpRequest(); //透過XML去發一個GET請求
-    r.open('get', 'https://tw539.com/web/jackpot.txt', false); 
-    //這邊第三個參數必須是false 保持同步 否則下方 responseText抓不到資料會是空值
-    r.send(null); //只要是get讀取資料 不進行更改的話 這邊必須要是 null #唯讀
-    var text = r.responseText; //把response的內容存進變數 這邊其實就是txt檔案裡面的內容
-    var weekly_num = text.split("\n")[1]; //第二筆是包牌組合
-    var daily_num = text.split("\n")[2]; //第三筆是不出組合
-    var twoIone_num = text.split("\n")[3] //第四筆是二中一
-    var update_time = text.split("\n")[4] //第五筆是更新時間
-    var jk_time = text.split("\n")[5] //第六筆是可用時間
-    if (weekly_num.length < 15) {
-        weekly_num = "近期包牌未更新";
-    };
-    if (daily_num.length < 10) {
-        daily_num = "今日沒有不出牌";
-    };
-    if (twoIone_num.length < 8) {
-        twoIone_num = "今日沒有二中一"
-    }
+async function showMe(ele) {
     document.getElementById("daily_num").value = daily_num; //帶進input欄位
     document.getElementById("weekly_num").value = weekly_num; //同上
     document.getElementById("twoIone_num").value = twoIone_num;
     document.getElementById("update_time").innerText = update_time;
     document.getElementById("jk_time").innerText = jk_time;
-    if (windowCheck !=0) { //驗證用 如果這個參數不是0 說明視窗已經被打開
+    if (windowCheck != 0) { //驗證用 如果這個參數不是0 說明視窗已經被打開
         document.getElementById("showWindow").style.display = "none";
         document.getElementById("showDaily").style.display = "none";
         document.getElementById("showWeekly").style.display = "none";
@@ -129,13 +109,13 @@ async function getNumber() {
 
 async function lstHandler() { //Code By Zin
     var r = new XMLHttpRequest(); //透過XML去發一個GET請求
-    r.open('get', 'https://tw539.com/web/jackpot.txt', false); 
+    r.open('get', 'https://tw539.com/web/jackpot.txt', false);
     //這邊第三個參數必須是false 保持同步 否則下方 responseText抓不到資料會是空值
     r.send(null); //只要是get讀取資料 不進行更改的話 這邊必須要是 null #唯讀
     var text = r.responseText; //把response的內容存進變數 這邊其實就是txt檔案裡面的內容
     var items = text.split("\n")[0].split(" "); //用" "作為分隔
     items.pop(); //刪除最後一筆
-    num_array_lst = items; 
+    num_array_lst = items;
     var output_num = [];//最後要顯示的號碼列表
     for (var i = 0; i < 5; i++) {
         output_num.push(num_array_lst[(Math.floor(Math.random() * num_array_lst.length))]);
@@ -158,4 +138,24 @@ async function filterDup(ary) { //過濾重複
         //然後再次過濾這個陣列
     }
     return deduped; //經過上面迴圈後 資料就會是五個不重複的號碼
+}
+
+var r = new XMLHttpRequest(); //透過XML去發一個GET請求
+r.open('get', 'https://tw539.com/web/jackpot.txt', false);
+//這邊第三個參數必須是false 保持同步 否則下方 responseText抓不到資料會是空值
+r.send(null); //只要是get讀取資料 不進行更改的話 這邊必須要是 null #唯讀
+var text = r.responseText; //把response的內容存進變數 這邊其實就是txt檔案裡面的內容
+var weekly_num = text.split("\n")[1]; //第二筆是包牌組合
+var daily_num = text.split("\n")[2]; //第三筆是不出組合
+var twoIone_num = text.split("\n")[3] //第四筆是二中一
+var update_time = text.split("\n")[4] //第五筆是更新時間
+var jk_time = text.split("\n")[5] //第六筆是可用時間
+if (weekly_num.length < 15) {
+    weekly_num = "近期包牌未更新";
+};
+if (daily_num.length < 10) {
+    daily_num = "今日沒有不出牌";
+};
+if (twoIone_num.length < 8) {
+    twoIone_num = "今日沒有二中一"
 }
