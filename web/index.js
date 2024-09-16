@@ -15,7 +15,9 @@ async function showMe(ele) { //
     var text = r.responseText; //把response的內容存進變數 這邊其實就是txt檔案裡面的內容
     var weekly_num = text.split("\n")[1]; //第二筆是包牌組合
     var daily_num = text.split("\n")[2]; //第三筆是不出組合
-    var twoIone_num = text.split("\n")[3] //第三筆是二中一
+    var twoIone_num = text.split("\n")[3] //第四筆是二中一
+    var update_time = text.split("\n")[4] //第五筆是更新時間
+    var jk_time = text.split("\n")[5] //第六筆是可用時間
     if (weekly_num.length < 15) {
         weekly_num = "近期包牌未更新";
     };
@@ -28,6 +30,8 @@ async function showMe(ele) { //
     document.getElementById("daily_num").value = daily_num; //帶進input欄位
     document.getElementById("weekly_num").value = weekly_num; //同上
     document.getElementById("twoIone_num").value = twoIone_num;
+    document.getElementById("update_time").innerText = update_time;
+    document.getElementById("jk_time").innerText = jk_time;
     if (windowCheck !=0) { //驗證用 如果這個參數不是0 說明視窗已經被打開
         document.getElementById("showWindow").style.display = "none";
         document.getElementById("showDaily").style.display = "none";
