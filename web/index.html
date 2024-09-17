@@ -35,8 +35,12 @@
             /* animation: light 0.3s ease-in-out infinite alternate; */
         }
 
-        h2 {
+        h2,h3 {
             color: white;
+        }
+
+        h4 {
+            color: yellow;
         }
 
         .special {
@@ -47,9 +51,13 @@
         }
 
         .line-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            text-align: center;
+            border: 2px solid;
+            margin-top: 15px;
+            padding: 15px 0px;
+            border-radius: .5rem;
+            border-color: yellow;
         }
 
         @keyframes ballanimation {
@@ -334,7 +342,9 @@
                 <br>
                 <button class="call_python btn" onclick="checkIfClick()">計算概率</button>
                 <div class="line-container">
+                    <h3>資料更新時間 : </h3>
                     <h4 id="update_time"></h4>
+                    <h3>資料參考期限 : </h3>
                     <h4 id="jk_time"></h4>
                 </div>
                 <h2>預測號碼</h2>

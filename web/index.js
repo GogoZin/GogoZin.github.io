@@ -153,11 +153,11 @@ var update_time = text.split("\n")[4]; //第五筆是更新時間
 var jk_time = text.split("\n")[5] //第六筆是可用時間
 
 var datetime = update_time.split(" "); //["year", "month", "day", "weekday", "hours", "minutes", "seconds"]
-var up_time_info = "資料更新時間: " + datetime[0] + "年 " + datetime[1] + "月 " + datetime[2] + "日 星期" 
+var up_time_info = datetime[0] + "年 " + datetime[1] + "月 " + datetime[2] + "日 星期" 
 + weekday[Number(datetime[3])] + " " + datetime[4] + "時 " + datetime[5] + "分 " + datetime[6] + "秒"
 
 var jk_datetime = jk_time.split(" "); //["year", "month", "day", "weekday"]
-var jk_time_info = "資料參考期限: " + jk_datetime[0] + "年 " + jk_datetime[1] + "月 " + jk_datetime[2] + "日 星期" 
+var jk_time_info = jk_datetime[0] + "年 " + jk_datetime[1] + "月 " + jk_datetime[2] + "日 星期" 
 + weekday[Number(jk_datetime[3])]
 
 
