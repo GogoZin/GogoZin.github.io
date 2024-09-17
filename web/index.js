@@ -158,7 +158,7 @@ var up_time_info = datetime[0] + "年 " + datetime[1] + "月 " + datetime[2] + "
 
 var jk_datetime = jk_time.split(" "); //["year", "month", "day", "weekday"]
 var jk_time_info = jk_datetime[0] + "年 " + jk_datetime[1] + "月 " + jk_datetime[2] + "日 星期" 
-+ weekday[Number(jk_datetime[3])]
++ weekday[Number(jk_datetime[3])] + "20時 20分之前"
 
 
 document.getElementById("update_time").innerText = up_time_info;
