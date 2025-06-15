@@ -12325,7 +12325,7 @@ a:hover {
   z-index: 999;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12939,7 +12939,7 @@ body.dark-theme {
   color: #007bff;
 }
 
-.center-pic img{
+.center-pic img {
   height: 200px;
 }
 
@@ -12984,4 +12984,40 @@ body.dark-theme {
   border: 0;
   background-color: azure;
   padding: 3px 9px;
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  height: 45px;
+}
+
+.marquee {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorShift 1s ease-in-out infinite;
+}
+
+@keyframes colorShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }

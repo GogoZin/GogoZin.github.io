@@ -106,3 +106,37 @@ $(document).ready(function(){
     });
 }); 
 
+const marquee = document.getElementById("marqueeText");
+    const container = marquee.parentElement;
+
+    window.onload = () => {
+      const containerWidth = container.offsetWidth;
+      const textWidth = marquee.offsetWidth;
+
+      // 起始位置 = 容器右邊（讓第一字剛好在右邊）
+      marquee.style.left = containerWidth + "px";
+
+      // 滾動總距離 = 文字寬度 + 容器寬度
+      const totalDistance = textWidth + containerWidth;
+
+      // 設定你想要的滾動速度（像素/秒）
+      const speed = 100; // 100 px/sec 可調快或慢
+      const duration = totalDistance / speed;
+
+      // 設定動畫關鍵影格
+      marquee.style.animation = `scrollMarquee ${duration}s linear infinite`;
+
+      // 注入 keyframes（動態建立）
+      const styleSheet = document.createElement("style");
+      styleSheet.innerHTML = `
+        @keyframes scrollMarquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-${totalDistance}px);
+          }
+        }
+      `;
+      document.head.appendChild(styleSheet);
+    };
