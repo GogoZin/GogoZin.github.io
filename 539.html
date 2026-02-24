@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲清單 - 風火網路技術</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="個人經營 · 完全免費 · 值得信賴 提供今彩539概率演算、免費GM後台手遊、小遊戲與專業網路技術服務">
+    <meta name="author" content="風火網路技術">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="風火網路技術">
+    <meta property="og:description" content="個人經營 · 完全免費 · 值得信賴 提供今彩539概率演算、免費GM後台手遊、小遊戲與專業網路技術服務">
+    <meta property="og:image" content="assets/imgs/ogIndex.png">
+    <meta property="og:image:width" content="960">
+    <meta property="og:image:height" content="960">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- 背景粒子 -->
+    <div class="particles" id="particles"></div>
+
+    <!-- 光球效果 -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- 導航欄 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">風火網路技術</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="#" class="active">今彩539</a></li>
+                <li><a href="games.html">遊戲清單</a></li>
+                <li><a href="vpn.html">VPN下載</a></li>
+                <li><a href="resources.html">小遊戲與資源</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- <div class="hero-badge inline-block px-6 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
+                <span class="text-sm font-medium"></span>
+            </div> -->
+            <img src="assets/imgs/favicon.ico" alt="logo"
+                class="hero-badge inline-block px-6 py-2 rounded-full from-indigo-500/20 to-purple-500/20">
+            <h1 class="hero-title mb-6">今彩539演算器</h1>
+            <p class="hero-subtitle text-2xl text-gray-400 mb-4">全台唯一 · 免費使用 · 多重計算</p>
+            <p class="hero-subtitle text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
+                目前的算法有二中一 坐車 帶牌號 不出牌 全網僅此一家 由後台程式每日計算出結果後 直接更新到官網 祝您中獎 再多幫本平台多多推廣
+            </p>
+
+            <div class="game-card">
+                <!-- <div class="vpn-image">
+                    <div class="game-image-inner" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+                        <img src="assets/imgs/radmin.webp" alt="" class="game-photo">
+                    </div>
+                </div> -->
+                <h3 class="game-title">演算器</h3>
+                <p class="game-description">依照自己自己需求選擇下方按鈕 也可察看歷史紀錄 跟筆記本 資料每天晚上更新</p>
+                <iframe src="./web/index.html" width="100%" height="1080px" style="overflow-y: scroll;" class="border-0"></iframe>
+            </div>
+            <br>
+            <br><br><br>
+        </div>
+    </section>
+
+
+    <!-- 主內容 -->
+    <!-- <main class="main-content">
+        <div class="container">
+            <div class="games-grid py-20 relative z-10" id="services"></div>
+        </div>
+    </main> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 風火網路技術 tw539.com. 個人經營·完全免費·值得信賴</p>
+            <p class="footer-disclaimer">本站僅供技術交流與學習使用，請勿用於商業用途</p>
+        </div>
+    </footer>
+
+    <script>
+        // 粒子生成
+        function createParticles() {
+            const particlesContainer = document.getElementById(`particles`);
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement(`div`);
+                particle.className = `particle`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${Math.random() * 20}s`;
+                particle.style.animationDuration = `${15 + Math.random() * 10}s`;
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Intersection Observer 滾動動畫
+        function initScrollAnimations() {
+            const cards = document.querySelectorAll(`.game-card`);
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add(`reveal`);
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: `0px 0px -50px 0px`
+            });
+
+            cards.forEach(card => observer.observe(card));
+        }
+
+        // 初始化
+        document.addEventListener(`DOMContentLoaded`, () => {
+            createParticles();
+            initScrollAnimations();
+        });
+
+        // 載入動畫
+        window.addEventListener(`load`, () => {
+            document.body.style.opacity = `1`;
+        });
+    </script>
+
+    <script src="assets/js/main.js"></script>
+
+    <!-- Kuse SDK -->
+    <script src="https://cdn.kuse.ai/sdk.prd.js"></script>
+</body>
+
+</html>

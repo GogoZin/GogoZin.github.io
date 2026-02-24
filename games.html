@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲清單 - 風火網路技術</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="個人經營 · 完全免費 · 值得信賴 提供今彩539概率演算、免費GM後台手遊、小遊戲與專業網路技術服務">
+    <meta name="author" content="風火網路技術">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="風火網路技術">
+    <meta property="og:description" content="個人經營 · 完全免費 · 值得信賴 提供今彩539概率演算、免費GM後台手遊、小遊戲與專業網路技術服務">
+    <meta property="og:image" content="assets/imgs/ogIndex.png">
+    <meta property="og:image:width" content="960">
+    <meta property="og:image:height" content="960">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- 背景粒子 -->
+    <div class="particles" id="particles"></div>
+
+    <!-- 光球效果 -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- 導航欄 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">風火網路技術</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="539.html">今彩539</a></li>
+                <li><a href="#" class="active">遊戲清單</a></li>
+                <li><a href="vpn.html">VPN下載</a></li>
+                <li><a href="resources.html">小遊戲與資源</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <img src="assets/imgs/favicon.ico" alt="logo"
+                class="hero-badge inline-block px-6 py-2 rounded-full from-indigo-500/20 to-purple-500/20">
+            <h1 class="hero-title mb-6">遊戲清單</h1>
+            <p class="hero-subtitle text-2xl text-gray-400 mb-4">GM後台手遊 · 免費暢玩 · 雙端支援</p>
+            <p class="hero-subtitle text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
+                所有遊戲均需先 <strong class="text-indigo-400"><a href="vpn.html">下載VPN</a></strong> 
+                點擊遊戲的<strong class="text-indigo-400"> 查看VPN </strong>按鈕 
+                會自動複製地址 在VPN程式裡面直接貼上 連線至VPN後即可暢玩 推廣就送後台 無須任何費用
+            </p>
+            <a href="#services" class="cta-button inline-block px-8 py-4 rounded-full text-white font-semibold text-lg">
+                下滑查看 <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- 主內容 -->
+    <main class="main-content">
+        <div class="container">
+
+            <!-- 遊戲網格 -->
+            <div class="games-grid py-20 relative z-10" id="services">
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <div class="game-image-inner" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">
+                            <img src="assets/imgs/愛如初見.jpg" alt="" class="game-photo">
+                        </div>
+                    </div>
+                    <h3 class="game-title">仙境傳說·愛如初見</h3>
+                    <p class="game-description">需連線至VPN 可用模擬器遊玩 有GM後台 可多開打副本 物品可以直接刷 遊戲幣也可直接刷滿</p>
+                    <div class="game-buttons">
+                        <a href="https://drive.google.com/file/d/1hq5qNe-WIVmqSmHgRtfuubka3kHIeNSu/view?usp=sharing" class="game-button btn-play" target="_blank">
+                            <i class="fas fa-gamepad"></i>
+                            <span>遊戲下載</span>
+                        </a>
+                        <a href="http://10.147.17.191:81/gm/" class="game-button btn-admin" target="_blank">
+                            <i class="fas fa-cog"></i>
+                            <span>後台管理</span>
+                        </a>
+                        <a href="#" class="game-button btn-vpn" id="ro_id" data="272f5eae160bfe50" onclick="
+                            navigator.clipboard.writeText(document.getElementById('ro_id').getAttribute('data'));
+                            alert('遊戲名稱 : 仙境傳說·愛如初見\nZeroTier節點: 272f5eae160bfe50\n已自動複製到剪貼簿 請至應用內貼上')">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>查看VPN</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <div class="game-image-inner" style="background: linear-gradient(135deg, #fb923c, #f472b6);">
+                            <img src="assets/imgs/神諭大陸.jpg" alt="" class="game-photo">
+                        </div>
+                    </div>
+                    <h3 class="game-title">奇蹟·神諭大陸</h3>
+                    <p class="game-description">需連線至VPN H5三端互通 電腦 安卓 蘋果打開瀏覽器即可遊玩 推廣送後台儲值金 戰力無上限 </p>
+                    <div class="game-buttons">
+                        <a href="http://192.168.111.73:99/" class="game-button btn-play" target="_blank">
+                            <i class="fas fa-gamepad"></i>
+                            <span>進入遊戲</span>
+                        </a>
+                        <a href="#" class="game-button btn-admin">
+                            <i class="fas fa-cog"></i>
+                            <span>沒有後台</span>
+                        </a>
+                        <a href="#" class="game-button btn-vpn" id="mu_id" data="8bd5124fd6c1168d" onclick="
+                            navigator.clipboard.writeText(document.getElementById('mu_id').getAttribute('data'));
+                            alert('遊戲名稱 : 奇蹟·神諭大陸\nZeroTier節點: 8bd5124fd6c1168d\n已自動複製到剪貼簿 請至應用內貼上')">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>查看VPN</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <div class="game-image-inner" style="background: linear-gradient(135deg, #06b6d4, #6366f1);">
+                            <img src="assets/imgs/楓之谷079.jpeg" alt="" class="game-photo">
+                        </div>
+                    </div>
+                    <h3 class="game-title">楓之谷·V079</h3>
+                    <p class="game-description">需連線至VPN 懷舊轉生版 所有物品皆可從遊戲內獲得 無贊助禮包 一切全靠農 BOSS陸續開放中</p>
+                    <div class="game-buttons">
+                        <a href="https://drive.google.com/file/d/1e6QqXHBxkmUWG_mzkO9mPsAneKw8CLo4/view?usp=sharing" class="game-button btn-play" target="_blank">
+                            <i class="fas fa-gamepad"></i>
+                            <span>遊戲下載</span>
+                        </a>
+                        <a href="#" class="game-button btn-admin">
+                            <i class="fas fa-cog"></i>
+                            <span>沒有後台</span>
+                        </a>
+                        <a href="#" class="game-button btn-vpn" id="ms_id" data="e4da7455b23a6ef0" onclick="
+                            navigator.clipboard.writeText(document.getElementById('ms_id').getAttribute('data'));
+                            alert('遊戲名稱 : 楓之谷·V079\nZeroTier節點: e4da7455b23a6ef0\n已自動複製到剪貼簿 請至應用內貼上')">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>查看VPN</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <div class="game-image-inner" style="background: linear-gradient(135deg, #06b6d4, #6366f1);">
+                            <img src="assets/imgs/新楓之谷.png" alt="" class="game-photo">
+                        </div>
+                    </div>
+                    <h3 class="game-title">楓之谷·V186</h3>
+                    <p class="game-description">需連線至VPN 高版本無贊助禮包 頂傷5000E 物品全靠打王掉落 經驗10倍 掉寶1倍 金錢1倍 給你正服玩不到的體驗</p>
+                    <div class="game-buttons">
+                        <a href="https://cloud.tw539.com/BMS186.7z" class="game-button btn-play">
+                            <i class="fas fa-gamepad"></i>
+                            <span>遊戲下載</span>
+                        </a>
+                        <a href="#" class="game-button btn-admin">
+                            <i class="fas fa-cog"></i>
+                            <span>沒有後台</span>
+                        </a>
+                        <a href="#" class="game-button btn-vpn">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>查看VPN</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <div class="game-image-inner" style="background: linear-gradient(135deg, #06b6d4, #6366f1);">
+                            <img src="assets/imgs/打玻利.jpg" alt="" class="game-photo">
+                        </div>
+                    </div>
+                    <h3 class="game-title">仙境傳說·打玻利</h3>
+                    <p class="game-description">需連線至VPN H5三端互通 電腦 安卓 蘋果打開瀏覽器即可遊玩 推廣直接開通物品後台 無限刷道具</p>
+                    <div class="game-buttons">
+                        <a href="http://172.29.188.233/" class="game-button btn-play" target="_blank">
+                            <i class="fas fa-gamepad"></i>
+                            <span>進入遊戲</span>
+                        </a>
+                        <a href="http://172.29.188.233/ht/gm/" class="game-button btn-admin" target="_blank">
+                            <i class="fas fa-cog"></i>
+                            <span>後台管理</span>
+                        </a>
+                        <a href="#" class="game-button btn-vpn" id="roh5_id" data="363c67c55a55ddd7" onclick="
+                            navigator.clipboard.writeText(document.getElementById('roh5_id').getAttribute('data'));
+                            alert('遊戲名稱 : 仙境傳說·打玻利\nZeroTier節點: 363c67c55a55ddd7\n已自動複製到剪貼簿 請至應用內貼上')">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>查看VPN</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 風火網路技術 tw539.com. 個人經營·完全免費·值得信賴</p>
+            <p class="footer-disclaimer">本站僅供技術交流與學習使用，請勿用於商業用途</p>
+        </div>
+    </footer>
+
+    <script>
+        // 粒子生成
+        function createParticles() {
+            const particlesContainer = document.getElementById(`particles`);
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement(`div`);
+                particle.className = `particle`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${Math.random() * 20}s`;
+                particle.style.animationDuration = `${15 + Math.random() * 10}s`;
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Intersection Observer 滾動動畫
+        function initScrollAnimations() {
+            const cards = document.querySelectorAll(`.game-card`);
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add(`reveal`);
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: `0px 0px -50px 0px`
+            });
+
+            cards.forEach(card => observer.observe(card));
+        }
+
+        // 初始化
+        document.addEventListener(`DOMContentLoaded`, () => {
+            createParticles();
+            initScrollAnimations();
+        });
+
+        // 載入動畫
+        window.addEventListener(`load`, () => {
+            document.body.style.opacity = `1`;
+        });
+    </script>
+
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Kuse SDK -->
+    <script src="https://cdn.kuse.ai/sdk.prd.js"></script>
+</body>
+
+</html>
