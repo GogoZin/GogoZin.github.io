@@ -242,4 +242,8 @@ function loadM3U(fileName = 'tv.m3u') {
         .catch(err => console.error('M3U 讀取失敗', err));
 }
 
-loadM3U('tv.m3u');
+if (confirm("此網路電視為開源項目\n所有直播源皆從網路獲取 如有侵權請告知下架\n另外網路電視須滿18才能觀看，確定代表您已滿18\n如未滿請關閉本頁 謝謝")) {
+    loadM3U('tv.m3u');
+} else {
+    window.location.href = "https://tw539.com/";
+}
