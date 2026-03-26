@@ -68,7 +68,7 @@ async function playURL(url, name) {
     else if (url.includes('.flv')) type = 'flv';
 
     // 不確定再偵測
-    if (type === 'unknown') {
+    if (type === 'unknown' && !url.includes('lunar')) {
         type = await detectStreamType(proxiedURL);
     }
 
@@ -85,7 +85,11 @@ async function playURL(url, name) {
             video.src = proxiedURL;
             video.play();
         } else {
-            fallbackPlay(proxiedURL);
+            if (!url.includes('lunar')) {
+                fallbackPlay(proxiedURL);
+            } else {
+                playMpegTS(proxiedURL);
+            }
         }
     } catch (e) {
         console.error('播放錯誤 → fallback', e);
