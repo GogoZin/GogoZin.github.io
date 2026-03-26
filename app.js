@@ -51,9 +51,14 @@ async function detectStreamType(url) {
 
 // 播放主流程
 async function playURL(url, name) {
-    stopCurrentPlayer();
 
-    const proxiedURL = 'https://iptv.taizikeji.workers.dev/?url=' + encodeURIComponent(url);
+    stopCurrentPlayer(); // 停止播放
+    
+    if (url.includes(':5050')) { // 切換PROXY
+        var proxiedURL = 'https://iptv.tw539.com/?url=' + encodeURIComponent(url);
+    } else {
+        var proxiedURL = 'https://iptv.taizikeji.workers.dev/?url=' + encodeURIComponent(url);
+    }
 
     let type = 'unknown';
 
