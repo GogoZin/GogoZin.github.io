@@ -54,7 +54,7 @@ async function playURL(url, name) {
 
     stopCurrentPlayer(); // 停止播放
     
-    if (url.includes(':5050')) { // 切換PROXY
+    if (url.includes(':5050') || url.includes('lunar')) { // 切換PROXY
         var proxiedURL = 'https://iptv.tw539.com/?url=' + encodeURIComponent(url);
     } else {
         var proxiedURL = 'https://iptv.taizikeji.workers.dev/?url=' + encodeURIComponent(url);
