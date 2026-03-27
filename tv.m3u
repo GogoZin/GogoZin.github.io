@@ -240,47 +240,47 @@ https://tv.iill.top/api/LSTIME-Movie/index.m3u8
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="電影頻道",AMC電影台
 https://tv.iill.top/4gtv/4gtv-4gtv017
 
-#EXTINF:-1 group-title="不能瑟瑟",射射4K影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",射射4K影院
 http://lunar.pm:8080/leslie/snook/131306
 
-#EXTINF:-1 group-title="不能瑟瑟",夢想房間
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",夢想房間
 http://lunar.pm:8080/leslie/snook/131308
 
-#EXTINF:-1 group-title="不能瑟瑟",寶貝影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",寶貝影院
 http://lunar.pm:8080/leslie/snook/131298
 
-#EXTINF:-1 group-title="不能瑟瑟",多人影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",多人影院
 http://lunar.pm:8080/leslie/snook/131297
 
-#EXTINF:-1 group-title="不能瑟瑟",成人時間
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",成人時間
 http://lunar.pm:8080/leslie/snook/131296
 
-#EXTINF:-1 group-title="不能瑟瑟",懂事少女
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",懂事少女
 http://lunar.pm:8080/leslie/snook/131295
 
-#EXTINF:-1 group-title="不能瑟瑟",黑人專屬
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",黑人專屬
 http://lunar.pm:8080/leslie/snook/131300
 
-#EXTINF:-1 group-title="不能瑟瑟",吹吹影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",吹吹影院
 http://lunar.pm:8080/leslie/snook/131301
 
-#EXTINF:-1 group-title="不能瑟瑟",姊妹影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",姊妹影院
 http://lunar.pm:8080/leslie/snook/131302
 
-#EXTINF:-1 group-title="不能瑟瑟",家庭影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",家庭影院
 http://lunar.pm:8080/leslie/snook/131313
 
-#EXTINF:-1 group-title="不能瑟瑟",POVD影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",POVD影院
 http://lunar.pm:8080/leslie/snook/131340
 
-#EXTINF:-1 group-title="不能瑟瑟",PlayBoy影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",PlayBoy影院
 http://lunar.pm:8080/leslie/snook/131339
 
-#EXTINF:-1 group-title="不能瑟瑟",包養影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",包養影院
 http://lunar.pm:8080/leslie/snook/131349
 
-#EXTINF:-1 group-title="不能瑟瑟",業餘影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",業餘影院
 http://lunar.pm:8080/leslie/snook/131355
 
-#EXTINF:-1 group-title="不能瑟瑟",JAYS影院
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="不能瑟瑟",JAYS影院
 http://lunar.pm:8080/leslie/snook/131317
