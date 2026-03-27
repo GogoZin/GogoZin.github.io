@@ -12,11 +12,17 @@ https://tv.iill.top/4gtv/4gtv-4gtv002
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="台灣電視",TVBS HD
 https://tv.iill.top/4gtv/media-live073
 
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="台灣電視",人間衛視
+http://220.135.64.124:5050/4gtv-live008/index.m3u8
+
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="新聞頻道",三立iNEWS
-http://1.173.74.121:5050/iNEWS/index.m3u8
+http://220.135.64.124:5050/4gtv-live089/index.m3u8
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",三立綜合台HD
 http://220.135.64.124:5050/4gtv-live207/index.m3u8
+
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",Lifetime娛樂台
+http://220.135.64.124:5050/4gtv-live029/index.m3u8
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",緯來日本台
 https://tv.iill.top/api/VL-Japan/index.m3u8
@@ -44,6 +50,12 @@ https://tv.iill.top/api/Cti-E/index.m3u8
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="新聞頻道",中天新聞台
 https://tv.iill.top/4gtv/4gtv-4gtv009
+
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="新聞頻道",中視新聞台
+http://220.135.64.124:5050/of-4gtv-4gtv074/index.m3u8
+
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="新聞頻道",華視新聞台
+http://220.135.64.124:5050/of-4gtv-4gtv052/index.m3u8
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="新聞頻道",東森新聞台
 https://tv.iill.top/4gtv/4gtv-4gtv152
@@ -76,13 +88,13 @@ https://tv.iill.top/4gtv/4gtv-4gtv068
 https://tv.iill.top/4gtv/4gtv-4gtv067
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",亞洲旅遊台
-http://1.173.74.121:5050/of-4gtv-4gtv076/index.m3u8
+http://220.135.64.124:5050/of-4gtv-4gtv076/index.m3u8
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="新聞頻道",寰宇財經台
-http://1.173.74.121:5050/of-4gtv-4gtv158/index.m3u8
+http://220.135.64.124:5050/of-4gtv-4gtv158/index.m3u8
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="新聞頻道",寰宇新聞台
-http://1.173.74.121:5050/of-4gtv-4gtv156/index.m3u8
+http://220.135.64.124:5050/of-4gtv-4gtv156/index.m3u8
 
 #EXTINF:-1 group-title="體育頻道",道奇官方頻道
 https://restream-live.realiptv.to:443/live/ALEX/sg5ng25ikf/74683.ts
@@ -150,6 +162,9 @@ https://tv.iill.top/4gtv/4gtv-4gtv034
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",八大綜藝台
 https://tv.iill.top/4gtv/4gtv-4gtv039
 
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",愛爾達生活旅遊
+http://220.135.64.124:5050/4gtv-live120/index.m3u8
+
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="兒童頻道",靖天卡通台
 https://tv.iill.top/4gtv/4gtv-4gtv044
 
@@ -183,6 +198,21 @@ https://tv.iill.top/api/Animal-Planet/index.m3u8
 #EXTINF:-1 group-title="其他頻道",Discovery
 https://hls.iill.top/api/Discovery/index.m3u8
 
+#EXTINF:-1 group-title="其他頻道",歷史頻道
+http://220.135.64.124:5050/4gtv-live026/index.m3u8
+
+#EXTINF:-1 group-title="其他頻道",麥哲倫頻道
+http://220.135.64.124:5050/4gtv-live123/index.m3u8
+
+#EXTINF:-1 group-title="其他頻道",幸福空間居家
+http://220.135.64.124:5050/4gtv-live206/index.m3u8?proxy=true
+
+#EXTINF:-1 group-title="其他頻道",LUXE電視台
+http://220.135.64.124:5050/4gtv-live121/index.m3u8
+
+#EXTINF:-1 group-title="其他頻道",熱愛自然
+http://220.135.64.124:5050/4gtv-live208/index.m3u8
+
 #EXTINF:-1 group-title="電影頻道",HITS電影台
 http://220.135.64.124:5050/4gtv-live620/index.m3u8
 
@@ -212,31 +242,45 @@ https://tv.iill.top/4gtv/4gtv-4gtv017
 
 #EXTINF:-1 group-title="不能瑟瑟",射射4K影院
 http://lunar.pm:8080/leslie/snook/131306
+
 #EXTINF:-1 group-title="不能瑟瑟",夢想房間
 http://lunar.pm:8080/leslie/snook/131308
+
 #EXTINF:-1 group-title="不能瑟瑟",寶貝影院
 http://lunar.pm:8080/leslie/snook/131298
+
 #EXTINF:-1 group-title="不能瑟瑟",多人影院
 http://lunar.pm:8080/leslie/snook/131297
+
 #EXTINF:-1 group-title="不能瑟瑟",成人時間
 http://lunar.pm:8080/leslie/snook/131296
+
 #EXTINF:-1 group-title="不能瑟瑟",懂事少女
 http://lunar.pm:8080/leslie/snook/131295
+
 #EXTINF:-1 group-title="不能瑟瑟",黑人專屬
 http://lunar.pm:8080/leslie/snook/131300
+
 #EXTINF:-1 group-title="不能瑟瑟",吹吹影院
 http://lunar.pm:8080/leslie/snook/131301
+
 #EXTINF:-1 group-title="不能瑟瑟",姊妹影院
 http://lunar.pm:8080/leslie/snook/131302
+
 #EXTINF:-1 group-title="不能瑟瑟",家庭影院
 http://lunar.pm:8080/leslie/snook/131313
+
 #EXTINF:-1 group-title="不能瑟瑟",POVD影院
 http://lunar.pm:8080/leslie/snook/131340
+
 #EXTINF:-1 group-title="不能瑟瑟",PlayBoy影院
 http://lunar.pm:8080/leslie/snook/131339
+
 #EXTINF:-1 group-title="不能瑟瑟",包養影院
 http://lunar.pm:8080/leslie/snook/131349
+
 #EXTINF:-1 group-title="不能瑟瑟",業餘影院
 http://lunar.pm:8080/leslie/snook/131355
+
 #EXTINF:-1 group-title="不能瑟瑟",JAYS影院
 http://lunar.pm:8080/leslie/snook/131317
