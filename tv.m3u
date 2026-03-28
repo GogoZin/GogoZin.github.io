@@ -24,6 +24,9 @@ http://220.135.64.124:5050/4gtv-live207/index.m3u8
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",Lifetime娛樂台
 http://220.135.64.124:5050/4gtv-live029/index.m3u8
 
+#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育2台
+http://142.171.248.206:8080/live/livestream.flv
+
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",緯來日本台
 https://tv.iill.top/api/VL-Japan/index.m3u8
 
