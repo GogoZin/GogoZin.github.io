@@ -88,7 +88,7 @@ async function playURL(url, name) {
             if (url.includes('lunar')) {
                 playMpegTS(proxiedURL);
             } else if (url.includes('tw539')) {
-                playFLV(encodeURIComponent(url));
+                playFLV(url);
             } else {
                 fallbackPlay(proxiedURL);
             }
