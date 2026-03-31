@@ -25,13 +25,13 @@ http://220.135.64.124:5050/4gtv-live207/index.m3u8
 http://220.135.64.124:5050/4gtv-live029/index.m3u8
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育1台 (風火網路)
-https://tv_elta1.tw539.com/
+https://tv_elta1.tw539.com/elta_sport1
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育1台 (台灣線路)
 http://106.107.242.199/hls/1_0.m3u8
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育2台 (風火網路)
-https://tv_elta2.tw539.com/
+https://tv_elta2.tw539.com/elta_sport2
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育2台 (加州線路)
 http://142.171.248.206:8080/live/livestream.flv
