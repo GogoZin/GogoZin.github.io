@@ -24,14 +24,14 @@ http://220.135.64.124:5050/4gtv-live207/index.m3u8
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="綜藝戲劇",Lifetime娛樂台
 http://220.135.64.124:5050/4gtv-live029/index.m3u8
 
-#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育1台 (風火網路)
-https://tv_elta1.tw539.com/elta_sport1
+#EXTINF:-1 tvg-id="eltasport_twn" tvg-name="愛爾達體育1台" group-title="體育頻道",愛爾達體育1台 (日本線路)
+https://cc1.smt123.cc.cd/smt/2871
 
-#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育2台 (風火網路)
-https://tv_elta2.tw539.com/elta_sport2
+#EXTINF:-1 tvg-id="eltasport_twn" tvg-name="愛爾達體育2台" group-title="體育頻道",愛爾達體育2台 (日本線路)
+https://cc1.smt123.cc.cd/smt/1541
 
-#EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育3台 (風火網路)
-https://tv_elta3.tw539.com/elta_sport3
+#EXTINF:-1 tvg-id="eltasport_twn" tvg-name="愛爾達體育3台" group-title="體育頻道",愛爾達體育3台 (日本線路)
+https://cc1.smt123.cc.cd/smt/2578
 
 #EXTINF:-1 http-user-agent="okhttp/1.9.89" group-title="體育頻道",愛爾達體育1台 (備用/台灣)
 http://106.107.242.199/hls/1_0.m3u8
